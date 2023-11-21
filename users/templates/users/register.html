@@ -1,0 +1,33 @@
+{% extends "users/base.html" %}
+{% load widget_tweaks %}
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-3">
+        <form method="POST">
+            {% csrf_token %}
+            <h2 class="text-center">Registrarse</h2>
+            <div class="mb-3">
+                {{ form.username.label_tag }}
+                {{ form.username|attr:"class:form-control" }}
+            </div>
+            <div class="mb-3">
+                {{ form.first_name.label_tag }}
+                {{ form.first_name|attr:"class:form-control" }}
+            </div>
+            <div class="mb-3">
+                {{ form.last_name.label_tag }}
+                {{ form.last_name|attr:"class:form-control" }}
+            </div>
+            <div class="mb-3">
+                {{ form.password1.label_tag }}
+                {{ form.password1|attr:"class:form-control" }}
+            </div>
+            <div class="mb-3">
+                {{ form.password2.label_tag }}
+                {{ form.password2|attr:"class:form-control" }}
+            </div>
+            <button type="submit" class="btn btn-primary">Registrarse</button>
+        </form>
+    </div>
+</div>
+{% endblock content %}
