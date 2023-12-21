@@ -11,18 +11,12 @@ import os
 from docxtpl import DocxTemplate
 from courses.models import Course
 from docx2pdf import convert
-from io import BytesIO
-import tempfile
 import pythoncom
-import threading
-import win32com.client
 from spire.doc import *
 from spire.doc.common import *
 import random
 from datetime import date
 from dateutil.relativedelta import relativedelta
-import math,cairo
-import PyPDF2
 import fitz
 
 UserModel = get_user_model()
