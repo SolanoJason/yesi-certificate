@@ -9,6 +9,7 @@ app_name = 'users'
 urlpatterns = [
     path('register', views.register, name='register'),
     path('logout', views.LogoutUser.as_view(), name='logout'),
-    path('login', auth_views.LoginView.as_view(template_name='users/login.html', redirect_authenticated_user=True), name='login')
+    path('login', auth_views.LoginView.as_view(template_name='users/login.html', redirect_authenticated_user=True), name='login'),
+    path('get_file/<int:course>/', views.send_file, name='get-file')
 ]
 
